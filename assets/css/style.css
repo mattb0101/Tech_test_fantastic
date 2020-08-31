@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 50px auto auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #cccbcb;
+}
+
+.title {
+    display: flex;
+    height: 100%;
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+    grid-area: 1 / 1;
+    background-color: #fafafa;
+}
+
+.title img {
+    width: 30vw;
+}
+
+.hero-image {
+    grid-area: 2 / 1;
+    width: 80vw;
+}
+
+.hero-image img {
+    width: 100%;
+}
