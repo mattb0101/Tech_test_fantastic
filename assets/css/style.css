@@ -2,35 +2,88 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
     display: grid;
-    grid-template-rows: 50px auto auto auto auto auto;
+    grid-template-rows: repeat(6,);
     justify-content: center;
     align-items: center;
     background-color: #cccbcb;
+    padding: 0 10vw;
 }
 
 .title {
     display: flex;
-    height: 100%;
-    width: 80vw;
     justify-content: center;
     align-items: center;
     grid-area: 1 / 1;
-    background-color: #fafafa;
+    background-color: #eceaea;
 }
 
 .title img {
     width: 30vw;
+    padding: 2vmin 0 ;
 }
 
 .hero-image {
     grid-area: 2 / 1;
-    width: 80vw;
+    /* width: 80vw; */
 }
 
 .hero-image img {
     width: 100%;
 }
+
+/*---------------------Calendar Section-----------------------*/
+
+.training-container {
+    grid-area: 3 / 1;
+    background-color: #fafafa;
+}
+
+.inner-container {
+    max-width: 100%;
+    padding: 5vmin;
+}
+
+.training-day {
+    display: inline-block;
+    background: red;
+    font-weight: bold;
+    font-size: 0.5em;
+    padding: 1vmin 1.5vmin;
+}
+
+.training-day span:first-child {
+    color: #fff;
+}
+
+.training-day span:last-child {
+    color: #000;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: row;
+    margin: 1vh 0;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eceaea;
+    font-weight: bold;
+    margin-right: 2vmin;
+    height: 8vmin;
+    width: 8vmin;
+}
+
+.active {
+    background-color: red;
+    color: #fff;
+}
+
+/*---------------------Exercise Section-----------------------*/
