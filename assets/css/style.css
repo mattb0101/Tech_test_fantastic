@@ -7,7 +7,7 @@
 
 body {
     display: grid;
-    grid-template-rows: repeat(6,);
+    grid-template-rows: repeat(6, auto);
     justify-content: center;
     align-items: center;
     background-color: #cccbcb;
@@ -23,16 +23,15 @@ body {
 }
 
 .title img {
-    width: 30vw;
-    padding: 2vmin 0 ;
+    width: 25vw;
+    padding: 3vmin 0 ;
 }
 
 .hero-image {
     grid-area: 2 / 1;
-    /* width: 80vw; */
 }
 
-.hero-image img {
+.hero-image>img {
     width: 100%;
 }
 
@@ -52,7 +51,7 @@ body {
     display: inline-block;
     background: red;
     font-weight: bold;
-    font-size: 0.5em;
+    font-size: 0.5rem;
     padding: 1vmin 1.5vmin;
 }
 
@@ -67,7 +66,7 @@ body {
 .box-container {
     display: flex;
     flex-direction: row;
-    margin: 1vh 0;
+    margin: 1vh 0 2vh 0;
 }
 
 .box {
@@ -87,3 +86,104 @@ body {
 }
 
 /*---------------------Exercise Section-----------------------*/
+
+.exercise {
+    grid-area: 3 / 1;
+    font-size: 0.9rem;
+}
+
+.exercise p:first-child {
+    font-weight: bold;
+}
+
+.exercise>p {
+    margin: 3px 0;
+}
+
+.calendar-btn {
+    display: inline-block;
+    position: relative;
+    background-color: green;
+    border: none;
+    padding: 1.5vmin 0 1.5vmin 1.5vmin;
+    color: #fff;
+    font-size: 0.6rem;
+    font-weight: bold;
+    margin-top: 2vmin;
+}
+
+.calendar-btn>span {
+    background-color: #035309;
+    padding: 1.5vmin 1.8vmin;
+    margin-left: 1.5vmin;
+}
+
+
+/*---------------------Linkes Section-----------------------*/
+
+.links {
+    grid-area: 5 / 1;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2vmin; 
+}
+
+.links>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vmin;
+    width: 30%;
+}
+
+.links>div>i {
+    font-size: 5vmin;
+    padding: 1vmin;
+    color: red;
+    margin-right: 1vmin;
+}
+
+/*---------------------Shop Section-----------------------*/
+
+
+.shop {
+    grid-area: 4 / 1;
+}
+
+.title-bar {
+    background-color: #000;
+    font-size: 2.5vmin;
+    padding: 3.5vmin 0 3.5vmin 5vmin;
+    color: #fff;
+    font-weight: bold;
+    border-right: 5px solid red;
+}
+
+.shop-products {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #c40505;
+}
+
+.products-text {
+    font-size: 3vmin;
+    padding-left: 5vmin;
+    color: #fff;
+}
+
+.products-text>button {
+    border: none;
+    background-color: #363636;
+    font-size: 1.2vmin;
+    padding: 1vmin;
+    color:#fff;
+}
+
+.products-img {
+    width: 50%;
+}
