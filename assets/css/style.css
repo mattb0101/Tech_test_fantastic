@@ -16,6 +16,7 @@ body {
 
 .title {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     grid-area: 1 / 1;
@@ -29,9 +30,10 @@ body {
 
 .hero-image {
     grid-area: 2 / 1;
-}
+} 
 
-.hero-image>img {
+.hero-image img {
+    display: block;
     width: 100%;
 }
 
@@ -44,14 +46,18 @@ body {
 
 .inner-container {
     max-width: 100%;
-    padding: 5vmin;
+    padding: 3vmin 5vmin;
+}
+
+.inner-container h2 {
+    font-size: 6vmin;
 }
 
 .training-day {
     display: inline-block;
     background: red;
     font-weight: bold;
-    font-size: 0.5rem;
+    font-size: 2vmin;
     padding: 1vmin 1.5vmin;
 }
 
@@ -89,7 +95,7 @@ body {
 
 .exercise {
     grid-area: 3 / 1;
-    font-size: 0.9rem;
+    font-size: 3vmin;
 }
 
 .exercise p:first-child {
@@ -107,7 +113,7 @@ body {
     border: none;
     padding: 1.5vmin 0 1.5vmin 1.5vmin;
     color: #fff;
-    font-size: 0.6rem;
+    font-size: 2vmin;
     font-weight: bold;
     margin-top: 2vmin;
 }
@@ -118,8 +124,85 @@ body {
     margin-left: 1.5vmin;
 }
 
+/*---------------------Shop Section-----------------------*/
 
-/*---------------------Linkes Section-----------------------*/
+.shop {
+    grid-area: 4 / 1;
+}
+
+.title-bar {
+    background-color: #000;
+    font-size: 2.5vmin;
+    padding: 3.5vmin 0 3.5vmin 5vmin;
+    color: #fff;
+    font-weight: bold;
+    border-right: 5px solid red;
+}
+
+.shop-products {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: top;
+    background-image: linear-gradient(#c40505, #ee0606, #c40505);
+}
+
+.diagonal-line {
+    height: 8vmin;
+    width: 8vmin;
+    transform: skewX(-40deg);
+    border-left: 2px solid #fff;
+    margin-left: 1vmin;
+}
+
+.products-text {
+    font-size: 3vmin;
+    padding-left: 5vmin;
+    color: #fff;
+    font-weight: bold;
+    max-width: 50%
+}
+
+.products-img {
+    width: 55%;
+}
+
+.products-text p:last-of-type {
+    font-size: 1.7vmin;
+    padding: 1vmin 0;
+}
+
+.products-text>p span:first-child {
+    color: #000;
+}
+
+.products-text>p span:last-child {
+    font-size: 5vmin;
+}
+
+.shop-btn {
+    display: inline-block;
+    border: none;
+    background-color: #363636;
+    font-size: 1.2vmin;
+    padding: 1vmin 0 1vmin 1.5vmin;
+    color:#fff;
+    font-weight: bold;
+}
+
+.shop-btn>a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.shop-btn span {
+    background-color: #303030;
+    padding: 1vmin 1.8vmin;
+    margin-left: 1.5vmin;
+    
+}
+
+/*---------------------Links Section-----------------------*/
 
 .links {
     grid-area: 5 / 1;
@@ -146,90 +229,53 @@ body {
     margin-right: 1vmin;
 }
 
-/*---------------------Shop Section-----------------------*/
-
-
-.shop {
-    grid-area: 4 / 1;
-}
-
-.title-bar {
-    background-color: #000;
-    font-size: 2.5vmin;
-    padding: 3.5vmin 0 3.5vmin 5vmin;
-    color: #fff;
-    font-weight: bold;
-    border-right: 5px solid red;
-}
-
-.shop-products {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    background-image: linear-gradient(#c40505, #ee0606, #c40505);
-}
-
-.products-text {
-    font-size: 3vmin;
-    padding-left: 5vmin;
-    color: #fff;
-    font-weight: bold;
-}
-
-.products-img {
-    width: 55%;
-}
-
-.products-text p:last-of-type {
-    font-size: 1.7vmin;
-    padding: 2vmin 0;
-}
-
-.products-text>p span:first-child {
-    color: #000;
-}
-
-.products-text>p span:last-child {
-    font-size: 5vmin;
-}
-
-.shop-btn {
-    display: inline-block;
-    border: none;
-    background-color: #363636;
-    font-size: 1.2vmin;
-    padding: 1.5vmin 0 1.5vmin 1.5vmin;
-    color:#fff;
-}
-
-.shop-btn>span {
-    background-color: #303030;
-    padding: 1.5vmin 1.8vmin;
-    margin-left: 1.5vmin;
-}
-
 
 
 /*---------------------Footer-----------------------*/
 
 footer {
+    grid-area: 6 / 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #000;
     color: #fff;
+    padding: 5.5vmin;
 }
 
 .footer-title {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 7vmin;
+    
 }
 
 .footer-title>img {
-    width: 40%;
-    
+    width: 40vw;
+}
+
+.social-links {
+    margin: 2vh 0;
+    font-size: 4vmin;
+}
+
+.social-links>a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 1vw;
+}
+
+.footer-content {
+    font-size: 2vmin;
+    text-align: center;
+}
+
+.privacy {
+    color: #fff;
+}
+
+.unsubscribe {
+    color: #c40505;
+    text-decoration: none;
 }
