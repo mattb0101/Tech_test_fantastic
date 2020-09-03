@@ -141,13 +141,16 @@ body {
 
 .shop-products {
     display: flex;
+    position: relative;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: top;
+    align-items: center;
     background-image: linear-gradient(#c40505, #ee0606, #c40505);
 }
 
 .diagonal-line {
+    position: absolute;
+    top: 0;
     height: 8vmin;
     width: 8vmin;
     transform: skewX(-40deg);
@@ -156,11 +159,11 @@ body {
 }
 
 .products-text {
-    font-size: 3vmin;
+    font-size: 3vw;
     padding-left: 5vmin;
     color: #fff;
     font-weight: bold;
-    max-width: 50%
+    max-width: 50%;
 }
 
 .products-img {
@@ -177,7 +180,7 @@ body {
 }
 
 .products-text>p span:last-child {
-    font-size: 5vmin;
+    font-size: 5vw;
 }
 
 .shop-btn {
